@@ -22,3 +22,13 @@ def quick_sort(array, i=None, j=None):
         pivot = get_pivot(array, i, j)
         quick_sort(array, i, pivot - 1)
         quick_sort(array, pivot + 1, j)
+
+def inserion_sort(array):
+    for i in range(1, len(array)):
+        cons = array[i]
+        j = i-1
+
+        while (j >=0 and cons < array[j]) :
+                array[j+1] = array[j]
+                j -= 1
+        array[j+1] = cons
