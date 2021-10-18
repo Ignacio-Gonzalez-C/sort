@@ -27,6 +27,14 @@ class TestSortingAlgorithms(unittest.TestCase):
         sort.quick_sort(a)
         self.assertEqual(a, [1])
 
+    def test_quick_sort_4(self):
+        """
+        Prueba caso general #3
+        """
+        a = [1, 0, 9, 0, 5, 9]
+        sort.quick_sort(a)
+        self.assertEqual(a, [0, 0, 1, 5, 9, 9])
+
 
 if __name__ == '__main__':
     unittest.main()
