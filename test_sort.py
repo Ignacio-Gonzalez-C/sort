@@ -59,7 +59,7 @@ class TestSortingAlgorithms(unittest.TestCase):
         sort.inserion_sort(a)
         self.assertEqual(a, [1, 2, 4, 8, 9, 50])
     
-    def test_insertion_sort_3(self):
+    def test_insertion_sort_4(self):
         """
         Prueba para lista de tamaño 1
         """
@@ -67,6 +67,37 @@ class TestSortingAlgorithms(unittest.TestCase):
         sort.inserion_sort(a)
         self.assertEqual(a, [5])
 
+    def test_bubble_sort_1(self):
+        """
+        Prueba caso general #1
+        """
+        a = [1, 0, 3, -5, 8, 3]
+        sort.bubble_sort(a)
+        self.assertEqual(a, [-5, 0, 1, 3, 3, 8])
+
+    def test_bubble_sort_2(self):
+        """
+        Prueba caso general #2
+        """
+        a = [1, 1, 1, 0, 2, -1]
+        sort.bubble_sort(a)
+        self.assertEqual(a, [-1, 0, 1, 1, 1, 2])
+
+    def test_bubble_sort_3(self):
+        """
+        Prueba caso general #3
+        """
+        a = [-5, -10, 5, -1, 0, 1]
+        sort.bubble_sort(a)
+        self.assertEqual(a, [-10, -5, -1, 0, 1, 5])
+
+    def test_bubble_sort_4(self):
+        """
+        Prueba para lista de tamaño 1
+        """
+        a = [3]
+        sort.bubble_sort(a)
+        self.assertEqual(a, [3])
 
 if __name__ == '__main__':
     unittest.main()
