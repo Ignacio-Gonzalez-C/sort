@@ -99,5 +99,37 @@ class TestSortingAlgorithms(unittest.TestCase):
         sort.bubble_sort(a)
         self.assertEqual(a, [3])
 
+    def test_selection_sort_1(self):
+        """
+        Prueba caso general #1
+        """
+        a = [9, 8, 7, 6, 4, 5]
+        sort.selection_sort(a)
+        self.assertEqual(a, [4, 5, 6, 7, 8, 9])
+
+    def test_selection_sort_2(self):
+        """
+        Prueba caso general #2
+        """
+        a = [0, 1, 0, 0, 0, -1]
+        sort.selection_sort(a)
+        self.assertEqual(a, [-1, 0, 0, 0, 0, 1])
+
+    def test_selection_sort_3(self):
+        """
+        Prueba caso general #3
+        """
+        a = [-5, -8, 3, 80, -50]
+        sort.selection_sort(a)
+        self.assertEqual(a, [-50, -8, -5, 3, 80])
+
+    def test_selection_sort_4(self):
+        """
+        Prueba para lista de tamaño 1
+        """
+        a = [47]
+        sort.selection_sort(a)
+        self.assertEqual(a, [47])
+
 if __name__ == '__main__':
     unittest.main()
