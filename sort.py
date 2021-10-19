@@ -40,3 +40,13 @@ def bubble_sort(array):
         for j in range(0, length-i-1):
             if array[j] > array[j + 1] :
                 array[j], array[j + 1] = array[j + 1], array[j]
+
+def selection_sort(array):
+    for i in range(len(array)):
+        
+        minum = i
+        for j in range(i+1, len(array)):
+            if array[minum] > array[j]:
+                minum = j
+
+        array[i], array[minum] = array[minum], array[i]
